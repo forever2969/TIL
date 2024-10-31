@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://forever2969.github.io/sitemap-index.xml
+Host: https://forever2969.github.io

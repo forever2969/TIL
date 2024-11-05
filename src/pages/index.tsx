@@ -10,19 +10,28 @@ import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 import { CategoryListProps } from 'components/Main/CategoryList'
 import Template from 'components/Common/Templates'
+import { PostListItemType } from 'types/PostItem.types'
 
 type IndexPageProps = {
   location: {
     search: string
   }
   data: {
+    site: {
+      siteMetadata: {
+        title: string
+        description: string
+        siteUrl: string
+      }
+    }
     allMarkdownRemark: {
-      edges: PostType[]
+      edges: PostListItemType[]
     }
     file: {
       childImageSharp: {
         gatsbyImageData: IGatsbyImageData
       }
+      publicURL: string
     }
   }
 }
